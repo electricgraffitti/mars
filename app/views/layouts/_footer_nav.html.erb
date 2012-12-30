@@ -1,21 +1,13 @@
   <div class="footer_nav">
   	<ul>
-  		<!-- <li>&#169;2010 <%= APP['app_name'] %>&trade;</li> -->
-			<li><%= link_to "Home", root_path %></li>
-      <li><%#= link_to "About", about_path %></li>
-			<li><%#= link_to "Products", products_path %></li>
-			<li><%#= link_to "Blog", blogs_path %></li>
-      <li><%#= link_to "Contact", contact_path %></li>
-			<li><%#= link_to "Privacy Policy", privacy_path %></li>
-			<li><%#= link_to "FAQ", faq_path %></li>
-			<li><%#= link_to "Returns", returns_path %></li>
-			<li><%#= link_to "Terms of Service", terms_path %></li>
-			<%# if current_admin %>
-				<li><%#= link_to "Logout", admin_logout_path, :title => "Admin Logout", :class => "admin_nav" %></li>
-				<li><%#= link_to "Dashboard", admin_dashboard_path, :title => "Admin Dashboard", :class => "admin_nav" %></li>
-			<%# else %>
-				<li><%#= link_to "Admin", admin_login_path, :title => "Castle Protection Admin" %></li>
-			<%# end %>
+  		<li><%= link_to "Home", root_path %></li>
+			<li><%= link_to "Print Collateral"%></li>
+			<li><%= link_to "Landing Pages"%></li>
+			<li><%= link_to "Emails"%></li>
+			<li><%= link_to "Website"%></li>
+			<li><%= link_to "Signs & Displays"%></li>
+			<li><%= link_to "Miscellaneous"%></li>
+			<li class="last"><%#= login_logout_link %></li>
 				
   	</ul>
   </div>
