@@ -1,0 +1,31 @@
+<% content_for :banner do %>
+  <div id="banner" class="full_row">  	
+  	<div id="slider" class="index_banner">
+      <div class="scroll">
+        <div class="scrollContainer">
+
+        </div>
+      </div>
+    </div>
+    <!-- Banner Nav -->
+  	<div class="banner_arrows left_arrow"></div>
+    <div class="banner_arrows right_arrow"></div>
+  </div>
+<% end %>
+
+
+
+
+
+
+
+
+
+
+<% content_for :javascripts do %>
+  <script type="text/javascript" charset="utf-8">
+    $(document).ready(function() {
+      Base.indexBanners();
+    });
+  </script>
+<% end %>

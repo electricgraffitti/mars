@@ -1,14 +1,36 @@
 <!DOCTYPE html>
-<html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 <head>
-  <title>Mars</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+  <%= render :partial => "layouts/headmeta" %>
 </head>
-<body>
-
-<%= yield %>
-
+<body class="clearfix">
+  <div id="mast_header"></div>
+  <!-- Application Layout -->
+  <div id="wrapper" class="clearfix">
+    <%= render :partial => 'layouts/flash', :locals => {:flash => flash} %>
+  	<header id="hd" class="clearfix">
+    	<%= render :partial => "layouts/header" %>
+    </header>
+    <div id="bd" class="clearfix">
+      <div id="content_star"></div>
+      <%= yield :banner %>
+      <div id="content" class="clearfix">
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+  <div id="mast_sub_boxes">
+    <div id="sub_boxes" class="clearfix">
+      <%= yield :sub_boxes %>
+    </div>
+  </div>
+  <footer id="ft" class="clearfix">
+    <%= render :partial => "layouts/footer" %>
+  </footer>
+	<%= render :partial => "layouts/scripts" %>
 </body>
 </html>
