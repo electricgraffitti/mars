@@ -8,6 +8,8 @@ gem 'authlogic'
 gem 'paperclip'
 gem 'exception_notification'
 gem 'json'
+gem "rails3-generators"
+
 
 group :development do
   gem 'rspec-rails'
