@@ -1,14 +1,14 @@
-<div id="main_nav" class="main_nav">
+<div id="main_nav">
 	<%# if current_user %>	
 		<ul class="nav_ul">
-			<li><%= link_to "Home", root_path %></li>
-			<li><%= link_to "Print Collateral"%></li>
-			<li><%= link_to "Landing Pages"%></li>
-			<li><%= link_to "Emails"%></li>
-			<li><%= link_to "Website"%></li>
-			<li><%= link_to "Signs & Displays"%></li>
-			<li><%= link_to "Miscellaneous"%></li>
-			<li class="last"><%#= login_logout_link %></li>
+			<li class="home"><%= link_to "HOME", root_path %></li>
+			<li class="print"><%= link_to "PRINT COLLATERAL", print_path%></li>
+			<li class="landing"><%= link_to "LANDING PAGES", landing_pages_path%></li>
+			<li class="email"><%= link_to "EMAILS", emails_path%></li>
+			<li class="website"><%= link_to "WEBSITE", website_path %></li>
+			<li class="sign"><%= link_to "SIGNS & DISPLAYS", signs_path%></li>
+			<li class="misc"><%= link_to "MISCELLANEOUS", misc_path%></li>
+		  <!-- <li class="last"><%#= login_logout_link %></li> -->
 		</ul>
 	<%# else %>
     <!-- <ul class="nav_ul">

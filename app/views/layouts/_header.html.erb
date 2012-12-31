@@ -1,2 +1,7 @@
-<h1 id="logo"><%= link_to "Verisk Health Marketing", root_path %></h1>
-<%= render :partial => "layouts/main_nav" %>
+<div class="top_section">
+  <h1 id="logo"><%= link_to "Verisk Health Marketing", root_path %></h1>
+  <%= link_to "Contact Marketing", "mailto:larry@cube2media.com", :class => "contact_link" %>
+</div>
+<div class="top_nav">
+  <%= render :partial => "layouts/main_nav" %>
+</div>
