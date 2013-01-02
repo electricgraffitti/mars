@@ -24,7 +24,7 @@
 #
 
 class User < ActiveRecord::Base
-  attr_accessible :crypted_password, :email, :password_salt, :persistence_token, :username
+  attr_accessible :password, :password_confirmation, :email, :username, :first_name, :last_name
   
   # Authlogic
   acts_as_authentic do |c|

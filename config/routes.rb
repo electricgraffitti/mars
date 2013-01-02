@@ -10,6 +10,7 @@ Mars::Application.routes.draw do
   match "logout" => "user_sessions#destroy", :as => :logout
   # match "user-dashboard" => "users#show", :as => :dashboard
   
+  match "asset-request-home" => "pages#index", :as => :home
   match "print-collateral" => "pages#print", :as => :print
   match "landing-pages" => "pages#landing_pages", :as => :landing_pages
   match "email-campaigns" => "pages#emails", :as => :emails
@@ -23,5 +24,5 @@ Mars::Application.routes.draw do
   resources :user_sessions
   resources :admin_sessions
 
-  root :to => "pages#index"
+  root :to => "user_sessions#check_session"
 end
