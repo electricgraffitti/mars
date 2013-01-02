@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
   
-  render :layout  => 'internal'
+  before_filter :require_admin
+  layout 'internal'
+  
   # GET /users
   # GET /users.json
   def index
