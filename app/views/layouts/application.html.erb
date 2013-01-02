@@ -9,9 +9,11 @@
 </head>
 <body class="clearfix">
   <div id="mast_header"></div>
+  <div id="nav_wrapper"></div>
   <!-- Application Layout -->
   <div id="wrapper" class="clearfix">
     <%= render :partial => 'layouts/flash', :locals => {:flash => flash} %>
+    
   	<header id="hd" class="clearfix">
     	<%= render :partial => "layouts/header" %>
     </header>
@@ -29,6 +31,10 @@
     </div>
   </div>
   <footer id="ft" class="clearfix">
+    <div class="dark_footer_band">
+      <div class="small_dark_footer_wrap"></div>
+    </div>
+    <div class="light_footer_band">
     <%= render :partial => "layouts/footer" %>
   </footer>
 	<%= render :partial => "layouts/scripts" %>

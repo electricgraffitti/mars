@@ -1,4 +1,9 @@
 class AdminsController < ApplicationController
+  
+  before_filter :super? => [:new, :create]
+  layout 'internal'
+  
+  
   # GET /admins
   # GET /admins.json
   def index

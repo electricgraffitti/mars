@@ -1,9 +1,9 @@
 class PagesController < ApplicationController
   
-  before_filter :require_user
+  before_filter :require_auth
   
   def index
-    
+    @users = User.all
   end
   
   def print

@@ -8,7 +8,6 @@ Mars::Application.routes.draw do
   # User Login/Logout Paths
   match "login" => "user_sessions#check_session", :as => :login
   match "logout" => "user_sessions#destroy", :as => :logout
-  # match "user-dashboard" => "users#show", :as => :dashboard
   
   match "asset-request-home" => "pages#index", :as => :home
   match "print-collateral" => "pages#print", :as => :print
@@ -25,4 +24,5 @@ Mars::Application.routes.draw do
   resources :admin_sessions
 
   root :to => "user_sessions#check_session"
+  
 end

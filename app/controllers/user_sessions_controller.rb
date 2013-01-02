@@ -18,12 +18,12 @@ class UserSessionsController < ApplicationController
 
   def destroy
     current_user_session.destroy
-    redirect_to(root_path, :notice => "Successfully Logged Out.")
+    redirect_to(root_path, :notice => "User Successfully Logged Out.")
   end
 
   def check_session
     if current_user
-      redirect_to root_path
+      redirect_to home_path
     else
       redirect_to new_user_session_path
     end

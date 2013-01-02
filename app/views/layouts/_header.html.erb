@@ -1,6 +1,20 @@
 <div class="top_section">
-  <h1 id="logo"><%= link_to "Verisk Health Marketing", root_path %></h1>
-  <%= link_to "Contact Marketing", "mailto:larry@cube2media.com", :class => "contact_link" %>
+  <h1 id="logo"><%= link_to "Verisk Health Marketing", home_path %></h1>
+  
+    <%  if current_user %>
+    <div class="logout_wrap">
+      <%= link_to "Logout", logout_path, :alt => "Logout" %>
+  </div>
+    <h4>Welcome <span><%= (user_name).titleize %></span></h4>
+    <%= link_to "Contact Marketing", "mailto:larry@cube2media.com", :class => "admin_link" %>
+    <% elsif current_admin %>
+    <div class="logout_wrap">
+    <%= link_to "Logout", admin_logout_path %>
+    </div>
+    <h4>Welcome Admin <span><%= (admin_name).titleize %></span></h4>
+    
+    <% end %>
+
 </div>
 <div class="top_nav">
   <%= render :partial => "layouts/main_nav" %>
