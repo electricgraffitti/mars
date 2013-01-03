@@ -1,21 +1,21 @@
 <div class="column_1">
   <div id="form_box">
     <h3>Admin Login</h3>
-  <%= form_for(@admin_session) do |f| %>
-  <%= render :partial => 'layouts/form_errors', :locals => {:obj => @admin_session} %>
-  <div class="field">
-    <%= f.label :username %><br/>
-    <%= f.text_field :username %>
+    <%= form_for(@admin_session) do |f| %>
+    <%= render :partial => 'layouts/form_errors', :locals => {:obj => @admin_session} %>
+    <div class="field">
+      <%= f.label :username %><br/>
+      <%= f.text_field :username %>
+    </div>
+    <div class="field">
+      <%= f.label :password %><br/>
+      <%= f.password_field :password %>
+    </div>
+    <div class="field">
+      <%= f.submit "Login", :class => "button_lg orange_button" %><br/>
+    </div>
+    <% end %>
   </div>
-  <div class="field">
-    <%= f.label :password %><br/>
-    <%= f.password_field :password %>
-  </div>
-  <div class="field">
-    <%= f.submit "Login", :class => "button_lg orange_button" %><br/>
-  </div>
-  <% end %>
-</div>
 </div>
 <div class="column_23">
   <%= image_tag('login_logo.png') %>

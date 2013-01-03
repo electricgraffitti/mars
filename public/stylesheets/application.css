@@ -1389,7 +1389,7 @@ input[type="submit"].btn, input[type="button"].btn {
 }
 /*************************************************************************************************************************************/
 /****************************************************************************************************** FORMS ************************/
-#form_box {
+#form_box, #setup_box {
 	position:relative;
 	float: left;
 	-moz-box-shadow: 0 0 30px 2px #4CC6F3;
@@ -1398,6 +1398,9 @@ input[type="submit"].btn, input[type="button"].btn {
 	-moz-border-radius: 15px;
 	border-radius: 15px;
 	padding:40px;
+}
+#setup_box {
+	width: 600px;
 }
 #form_box h3 {
 	margin-left:5px;
@@ -1423,6 +1426,14 @@ h3.logo_sub_header {
 	text-align:right;
 	margin-right:95px;
 	font-weight:300;
+}
+.setup_wrap {
+	margin: 25px 0px 20px 10px;
+}
+h2.setup {
+	font-size: 30px;
+	font-weight:100;
+	text-align:left;
 }
 .admin_form_wrap {
 	margin-top: 60px;
