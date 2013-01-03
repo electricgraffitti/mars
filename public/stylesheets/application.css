@@ -703,14 +703,16 @@ header {
 	top: 0;
 	width: 168px;
 }
-a.admin_link {
+a.admin_link, a.contact_link {
 	float:right;
 	text-decoration: none;
 	position: relative;
-	margin: 25px 20px 0px 0px;
 	color: #0096d6;
 }
-a.admin_link:hover {
+a.contact_link {
+	margin: 25px 20px 0px 0px;	
+}
+a.contact_link:hover {
 	color: #ffa400;
 }
 #serving_list {position: absolute;bottom: 13px;left: 199px;font-style: italic;color: #777;width: 900px;font-size: 13px;text-align: left;z-index: 3;}

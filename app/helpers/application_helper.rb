@@ -27,9 +27,9 @@ module ApplicationHelper
 
   def user_login_logout_link
     if current_user
-      link_to "Logout", logout_path
+      link_to "User Logout", logout_path, :class => "admin_link"
     else
-      link_to "Login", login_path
+      link_to "User Login", login_path
     end
   end
   

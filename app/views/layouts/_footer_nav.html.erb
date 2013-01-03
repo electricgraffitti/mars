@@ -8,7 +8,9 @@
 			<li><%= link_to "Signs & Displays"%></li>
 			<li><%= link_to "Miscellaneous"%></li>
 			<li><%= link_to "Contact Marketing", "mailto:larry@cube2media.com" %></li>
-			<li class="last"><%= user_login_logout_link %></li>
+			<% unless current_admin %>
+			  <li class="last"><%= user_login_logout_link %></li>
+			<% end %>
 				
   	</ul>
   </div>
