@@ -332,7 +332,7 @@ var Admin = {
 	},
 	
 	setupDataTables: function() {
-		postsTable = $('#dashboard_blogs_table').dataTable({
+		postsTable = $('#dashboard_categories_table').dataTable({
 			"bJQueryUI": true,
 			"sPaginationType": "full_numbers"
 		});
@@ -340,7 +340,7 @@ var Admin = {
 			"bJQueryUI": true,
 			"sPaginationType": "full_numbers"
 		});
-		linksTable = $('#dashboard_packages_table').dataTable({
+		linksTable = $('#dashboard_print_collaterals_table').dataTable({
 			"bJQueryUI": true,
 			"sPaginationType": "full_numbers"
 		});

@@ -1,0 +1,16 @@
+<div class="body_header">
+  <p>Magazine Ads</p>
+  <div class="grey_block_internal"></div>
+</div>
+<% @magazines.each do |pc| %>
+  <ul class="secondary_level_internal">
+    <li>
+      <%= image_tag('../images/post_8x5landscape.png') %>
+      <h3><%= pc.title %></h3>
+      <p>
+        <%= pc.description %>
+      </p>
+      <%= link_to "Build", pc.url, :class => "button_sm orange_button" %>
+    </li>
+  </ul>
+<% end %>

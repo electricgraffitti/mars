@@ -1,0 +1,35 @@
+<div class="admin_segment">
+  <h3>Print Collateral</h3>
+  <div class="table_actions">
+    <%= link_to 'Add New Print Item', new_print_collateral_path, :class => "admin_btn  right" %>
+  </div>
+  <table id="dashboard_print_collaterals_table" class="display">
+    <thead>  
+      <tr>
+        <th>Image</th>
+        <th>Listing</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Created On</th>
+        <th>Edit Item</th>
+        <th>Delete Item</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% print_collaterals.each do |pc| %>
+			<% unless pc.blank? %>
+        <tr>
+          <td><p>Placeholder</p></td>
+          <td><%=h (pc.print_category).titleize %></td>
+          <td><%=h (pc.title).titleize %></td>
+          <td><%=h truncate(pc.description, :length => 200) %></td>
+					<td><%=h (pc.created_at).to_s(:full) %></td>
+          <td><%= button_to 'Edit Item', edit_print_collateral_path(pc), :class => "update" %></td>
+          <td><%= button_to 'Delete Item', pc, :confirm => 'Are you sure?', :method => :delete, :class => "delete" %></td>
+        </tr>
+			<% end %>
+      <% end %>
+    </tbody>
+  </table>
+</div>

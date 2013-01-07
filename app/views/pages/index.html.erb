@@ -12,74 +12,25 @@
   <div class="grey_block"></div>
 </div>
 <div class="main_content">
+  
   <ul class="top_level">
     <li>
+      <% @categories.each do |c| %>
       <ul class="secondary_level">
         <li>
           <%= image_tag('../images/print_icon.png') %>
-          <h3>Print Collateral</h3>
+          <h3><%= c.title %></h3>
           <p>
-            These monthly educational sessions are brought to straight form our xperts here at Verisk Health sectetur adipisicing elit, ed do eiusmod tempor incididunt agna aliqua. Ut enim ad minim veniam, quis nostrud exerci- tation ullamco laboris nisi ut aliquip exea
+            <%= c.description %>
           </p>
-          <%= link_to "Print", print_path %>
-        </li>
-        <li>
-          <%= image_tag('../images/landing_icon.png') %>
-          <h3>Landing Pages &#38; Web</h3>
-          <p>
-            These monthly educational sessions are brought to straight form our xperts here at Verisk Health sectetur adipisicing elit, ed do eiusmod tempor incididunt agna aliqua. Ut enim ad minim veniam, quis nostrud exerci- tation ullamco laboris nisi ut aliquip exea commodo
-          </p>
-          <%= link_to "Print", landing_pages_path %>
-        </li>
-        <li>
-          <%= image_tag('../images/email_icon.png') %>
-          <h3>Emails</h3>
-          <p>
-            These monthly educational sessions are brought to straight form our xperts here at Verisk Health sectetur adipisicing elit, ed do eiusmod tempor incididunt agna aliqua. Ut enim ad minim veniam, quis nostrud exerci- tation ullamco laboris nisi ut aliquip exea commodo
-          </p>
-          <%= link_to "Print", emails_path %>
+          <%= link_to "Go", c.url_path, :class => "button_sm orange_button" %>
         </li>
       </ul>
-    </li>
-    <li>
-      <ul class="secondary_level">
-        <li>
-          <%= image_tag('../images/website_icon.png') %>
-          <h3>Website</h3>
-          <p>
-            These monthly educational sessions are brought to straight form our xperts here at Verisk Health sectetur adipisicing elit, ed do eiusmod tempor incididunt agna aliqua. Ut enim ad minim veniam, quis nostrud exerci- tation ullamco laboris nisi ut aliquip exea commodo
-          </p>
-          <%= link_to "Print", website_path %>
-        </li>
-        <li>
-          <%= image_tag('../images/sign_icon.png') %>
-          <h3>Signs &#38; Displays</h3>
-          <p>
-            These monthly educational sessions are brought to straight form our xperts here at Verisk Health sectetur adipisicing elit, ed do eiusmod tempor incididunt agna aliqua. Ut enim ad minim veniam, quis nostrud exerci- tation ullamco laboris nisi ut aliquip exea commodo
-          </p>
-          <%= link_to "Print", signs_path %>
-        </li>
-        <li>
-          <%= image_tag('../images/misc_icon.png') %>
-          <h3>Miscellaneous</h3>
-          <p>
-            These monthly educational sessions are brought to straight form our xperts here at Verisk Health sectetur adipisicing elit, ed do eiusmod tempor incididunt agna aliqua. Ut enim ad minim veniam, quis nostrud exerci- tation ullamco laboris nisi ut aliquip exea commodo
-          </p>
-          <%= link_to "Print", misc_path %>
-        </li>
-      </ul>
+      <% end %>
     </li>
   </ul>
+  
 </div>
-
-
-
-
-
-
-
-
-
 
 <% content_for :javascripts do %>
   <script type="text/javascript" charset="utf-8">

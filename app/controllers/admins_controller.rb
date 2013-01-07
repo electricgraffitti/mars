@@ -1,7 +1,8 @@
 class AdminsController < ApplicationController
   
-  before_filter :super? => [:new, :create]
-  layout 'internal'
+  before_filter :super_admin, :except => [:index, :admin_dashboard]
+  before_filter :require_admin, :only => :index
+  layout 'admin'
   
   
   # GET /admins
@@ -49,7 +50,7 @@ class AdminsController < ApplicationController
 
     respond_to do |format|
       if @admin.save
-        format.html { redirect_to @admin, notice: 'Admin was successfully created.' }
+        format.html { redirect_to admin_dashboard_path, notice: 'Admin was successfully created.' }
         format.json { render json: @admin, status: :created, location: @admin }
       else
         format.html { render action: "new" }
@@ -85,4 +86,13 @@ class AdminsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def admin_dashboard
+      @categories = Category.all
+      @print_collaterals = PrintCollateral.all
+      @users = User.all
+      respond_to do |format|
+        format.html
+      end
+    end
 end

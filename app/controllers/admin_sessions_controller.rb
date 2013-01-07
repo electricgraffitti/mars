@@ -10,7 +10,7 @@ class AdminSessionsController < ApplicationController
     @admin_session = AdminSession.new(params[:admin_session])
     if @admin_session.save
       flash[:notice] = 'Admin Login Successfull.'
-      redirect_to home_path
+      redirect_to admin_dashboard_path
     else
       flash[:notice] = "Invalid login, please try again"
       redirect_to :action => "new"

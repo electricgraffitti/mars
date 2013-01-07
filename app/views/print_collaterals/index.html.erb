@@ -1,0 +1,41 @@
+<% content_for :banner do %>
+  <div id="banner" class="full_row index_banner">
+    <h2>
+      <span class="banner_black">Welcome to</span><br />
+      <span class="banner_blue">M.A.R.S.</span>
+    </h2>  	
+    <p class="banner">Marketing Asset Request System</p>
+  </div>
+<% end %>
+<div class="body_header">
+  <p>Marketing Collateral</p>
+  <div class="grey_block"></div>
+</div>
+<div class="main_content">
+  
+  <ul class="top_level">
+    <li>
+      <% @print_collaterals.each do |pc| %>
+      <ul class="secondary_level">
+        <li>
+          <%= image_tag('../images/print_icon.png') %>
+          <h3><%= pc.title %></h3>
+          <p>
+            <%= pc.description %>
+          </p>
+          <%= link_to "Build", pc.url_path %>
+        </li>
+      </ul>
+      <% end %>
+    </li>
+  </ul>
+  
+</div>
+
+<% content_for :javascripts do %>
+  <script type="text/javascript" charset="utf-8">
+    $(document).ready(function() {
+      Base.indexBanners();
+    });
+  </script>
+<% end %>

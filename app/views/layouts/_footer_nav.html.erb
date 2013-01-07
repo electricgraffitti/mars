@@ -6,9 +6,11 @@
 			<li><%= link_to "Emails"%></li>
 			<li><%= link_to "Website"%></li>
 			<li><%= link_to "Signs & Displays"%></li>
-			<li><%= link_to "Miscellaneous"%></li>
+			<li><%= link_to "Events"%></li>
 			<li><%= link_to "Contact Marketing", "mailto:larry@cube2media.com" %></li>
-			<% unless current_admin %>
+			<% if current_admin %>
+			  <li><%= link_to "Admin Dash", admin_dashboard_path%></li>
+			<% else %>
 			  <li class="last"><%= user_login_logout_link %></li>
 			<% end %>
 				

@@ -1,13 +1,17 @@
 <div id="main_nav">
 	<%# if current_user %>	
 		<ul class="nav_ul">
+		  <% if current_admin %>
+		  <li class="home"><%= link_to "HOME", home_path %></li>
+		  <% else %>
 			<li class="home"><%= link_to "HOME", root_path %></li>
+			<% end %>
 			<li class="print"><%= link_to "PRINT COLLATERAL", print_path%></li>
 			<li class="landing"><%= link_to "LANDING PAGES", landing_pages_path%></li>
 			<li class="email"><%= link_to "EMAILS", emails_path%></li>
 			<li class="website"><%= link_to "WEBSITE", website_path %></li>
 			<li class="sign"><%= link_to "SIGNS & DISPLAYS", signs_path%></li>
-			<li class="misc"><%= link_to "MISCELLANEOUS", misc_path%></li>
+			<li class="misc"><%= link_to "EVENTS", events_path%></li>
 		  <!-- <li class="last"><%#= login_logout_link %></li> -->
 		</ul>
 	<%# else %>

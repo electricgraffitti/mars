@@ -9,6 +9,7 @@ gem 'paperclip'
 gem 'exception_notification'
 gem 'json'
 gem "rails3-generators"
+gem "carrierwave"
 
 
 group :development do

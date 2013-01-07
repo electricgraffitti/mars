@@ -238,7 +238,8 @@ button {
 width: auto;
 overflow: visible;
 }
-/* bicubic resizing for non-native sized IMG:code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
+/* bicubic resizing for non-native sized IMG:code.flickr.com/blog/
+2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
 .ie7 img {
 -ms-interpolation-mode: bicubic;
 }
@@ -313,8 +314,8 @@ float: right;
 .center {
 text-align: center;
 }
-/*************************************************************************************************************************************/
-/******************************************************************************************************* ERRORS **********************/
+/*****************************************************************************************************************************/
+/******************************************************************************************************* ERRORS **************/
 #flash {
 display: none;
 background: none repeat scroll 0 0 #0096d6;
@@ -395,8 +396,8 @@ top: -3px;
 left: -5px;
 width: 300px;
 }
-/*************************************************************************************************************************************/
-/*********************************************************************************************** KETCHUP ERRORS **********************/
+/*******************************************************************************************************************************/
+/*********************************************************************************************** KETCHUP ERRORS ***************/
 .ketchup-error-container {
 display: none;
 position: absolute;
@@ -447,8 +448,8 @@ background: url(../images/500.png) 0px 0px no-repeat;
 .item_textfield, .field, #cvv {
 	position: relative;
 }
-/*************************************************************************************************************************************/
-/*************************************************************************************************** TYPOGRAPHY **********************/
+/*********************************************************************************************************************************/
+/*************************************************************************************************** TYPOGRAPHY *****************/
 h1,h2,h3,h4,h5 {
 color: #333;
 margin-top: 0px;
@@ -505,8 +506,8 @@ h4.form_header {
 visibility: hidden;
 }
 */
-/*************************************************************************************************************************************/
-/**************************************************************************************************** GENERAL LAYOUT *****************/
+/**********************************************************************************************************************************/
+/**************************************************************************************************** GENERAL LAYOUT *************/
 body {
 position: relative;
 text-align: center;
@@ -633,8 +634,8 @@ float: right;
 .bold {
 font-weight: bold;
 }
-/*************************************************************************************************************************************/
-/***************************************************************************************************** COLORS ************************/
+/*********************************************************************************************************************************/
+/***************************************************************************************************** COLORS ********************/
 html,body {
 color: #444;
 background: url('../images/gray_bg_pattern.png') 0px 0px repeat;
@@ -661,8 +662,8 @@ color: #b11919;
 .gray {
 color: #555;
 }
-/*************************************************************************************************************************************/
-/****************************************************************************************************** HEADER ***********************/
+/*********************************************************************************************************************************/
+/****************************************************************************************************** HEADER *******************/
 #mast_header {
 	position: absolute;
 	top: 0px;
@@ -715,9 +716,17 @@ a.contact_link {
 a.contact_link:hover {
 	color: #ffa400;
 }
-#serving_list {position: absolute;bottom: 13px;left: 199px;font-style: italic;color: #777;width: 900px;font-size: 13px;text-align: left;z-index: 3;}
-/*************************************************************************************************************************************/
-/****************************************************************************************************** NAVIGATION *******************/
+#serving_list {position: absolute;
+	bottom: 13px;
+	left: 199px;
+	font-style: italic;
+	color: #777;
+	width: 900px;
+	font-size: 13px;
+	text-align: left;
+	z-index: 3;}
+/*********************************************************************************************************************************/
+/****************************************************************************************************** NAVIGATION ***************/
 .top_section {
 	width: 960px;
 	height:90px;
@@ -845,8 +854,8 @@ a.contact_link:hover {
 	position: relative;
 	padding-top:15px;
 }
-/*************************************************************************************************************************************/
-/****************************************************************************************************** MAIN CONTENT *****************/
+/*********************************************************************************************************************************/
+/****************************************************************************************************** MAIN CONTENT *************/
 #bd {
 	min-height: 415px;
 }
@@ -888,8 +897,8 @@ a.contact_link:hover {
 	float: left;
 	min-height: 350px;
 }
-/*************************************************************************************************************************************/
-/****************************************************************************************************** BANNER CONTENT ***************/
+/*********************************************************************************************************************************/
+/****************************************************************************************************** BANNER CONTENT ***********/
 #banner {
 	height:228px;
 	margin-left:10px;
@@ -980,14 +989,22 @@ h2.page_header {
 	font-weight:700;
 	width:240px;
 	border-bottom: 1px solid #ccc;
+	margin-left:25px;
 }
-.grey_block {
+.grey_block, .grey_block_internal {
 	border-bottom: 5px solid #ccc;
 	width:65px;
 	float:right;
 	position: absolute;
 	left: 240px;
 	top: 40px;
+}
+.grey_block_internal {
+	top:20px;
+}
+.main_content ul.top_level li {
+	padding-left:20px;
+	margin-top: 20px;
 }
 .main_content ul.top_level li {
 	width:960px;
@@ -999,20 +1016,47 @@ h2.page_header {
 	float:left;
 	padding:5px;
 }
-.main_content ul.secondary_level li h3 {
+.main_content ul.secondary_level li h3, .main_content ul.secondary_level_internal li h3 {
 	color: #0096d6;
 	font-weight:100;
 }
-.main_content ul.secondary_level li a {
-	background: url('../images/go_button.png');
-	width: 123px;
-	height: 50px;
-	text-indent:-9999em;
+.main_content ul.secondary_level li a, .main_content ul.secondary_level_internal li a {
+/*	background: url('../images/go_button.png');*/
+	width: 60px;
+	height: 13px;
 	display: block;
+	margin-top: 10px;
+	text-shadow: 0 -1px 0 #999;
+}
+.main_content ul.secondary_level li p {
+	width: 270px;
+}
+.main_content ul.secondary_level_internal li {
+	width:450px;
+	float:left;
+	padding:5px;
+	margin-top:10px;
+}
+.main_content ul.secondary_level_internal li img {
+	position: relative;
+	float:left;
+}
+.main_content ul.secondary_level_internal li h3 {
+	margin-top: 20px;
+	width:320px;;
+	position: relative;
+	float:left;
+}
+.main_content ul.secondary_level_internal li p {
+
+}
+.main_content ul.secondary_level_internal li a {
+	position: relative;
+	float:left;
 }
 .focused_text {font-weight: 700; font-size: 16px; line-height: 26px;}
-/*************************************************************************************************************************************/
-/****************************************************************************************************** FOOTER ***********************/
+/*********************************************************************************************************************************/
+/****************************************************************************************************** FOOTER *******************/
 footer {
 	border-top: 1px solid #555555;
 	position: relative;
@@ -1120,32 +1164,48 @@ div.va_footer_logo {
 	color: #fff;	
 	text-decoration: underline;
 }
-/*************************************************************************************************************************************/
-/****************************************************************************************************** ADMINS **********************/
+/*********************************************************************************************************************************/
+/****************************************************************************************************** ADMINS ******************/
 .admin_segment {
 	margin-top:30px;
 	padding: 10px 0px 40px 0px;
 	border-bottom:1px solid #000;
 }
 .admin_btn {
-	cursor: pointer;
-	display: block;
-	font-size: 12px;
-	height: 15px;
-	padding: 10px 0px;
-	position: relative;
-	text-align: center;
-	text-decoration: none;
-	text-shadow: 0 2px 2px #222222;
-	width: 134px;
-	background: url(../images/buttons/admin_blue_button.png) 0px -35px no-repeat;
-	color: #fff;
-	font-weight: 300;
-	border: none;
-	float:left;
+	position:relative;
+	display:block;
+	outline:none;
+	cursor:pointer;
+	text-align:center;
+	text-decoration:none;
+	font:14px/100% Arial,Helvetica,sans-serif;
+	padding:5px 25px;
+	text-shadow:0 1px 1px rgba(0,0,0,.3);
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;border-radius:5px;
+	-webkit-box-shadow:0 0px 6px rgba(0,0,0,.8);
+	-moz-box-shadow:0 0px 6px rgba(0,0,0,.8);box-shadow:0 0px 4px rgba(0,0,0,.8);color:#fff;
+	background:#f69b28;/* Old browsers */
+	background:-moz-linear-gradient(top,#f69b28 0%,#f29828 100%);/* FF3.6+ */
+	background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#4cc6f3),color-stop(100%,#f29828));/* Chrome,Safari4+ */
+	background:-webkit-linear-gradient(top,#f69b28 0%,#f29828 100%);/* Chrome10+,Safari5.1+ */
+	background:-o-linear-gradient(top,#f69b28 0%,#f29828 100%);/* Opera 11.10+ */
+	background:-ms-linear-gradient(top,#f69b28 0%,#f29828 100%);/* IE10+ */
+	background:linear-gradient(top,#f69b28 0%,#f29828 100%);/* W3C */
+	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#f69b28',endColorstr='#f29828',GradientType=0 );/* IE6-9 */
+	border:1px solid #f69b28;text-shadow:1px 1px 0px #f29828;
 }
 .admin_btn:hover {
-	background: url(../images/buttons/admin_blue_button.png) 0px 0px no-repeat;
+	text-decoration: none;
+	background:#0096d6;/* Old browsers */
+	background:-moz-linear-gradient(top,#0096d6 0%,#4cc6f3 100%);/* FF3.6+ */
+	background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#0096d6),color-stop(100%,#4cc6f3));/* Chrome,Safari4+ */
+	background:-webkit-linear-gradient(top,#0096d6 0%,#4cc6f3 100%);/* Chrome10+,Safari5.1+ */
+	background:-o-linear-gradient(top,#0096d6 0%,#4cc6f3 100%);/* Opera11.10+ */
+	background:-ms-linear-gradient(top,#0096d6 0%,#4cc6f3 100%);/* IE10+ */
+	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#cf0404',endColorstr='#4cc6f3',GradientType=0 );/* IE6-9 */
+	background:linear-gradient(top,#0096d6 0%,#4cc6f3 100%);/* W3C */
+	border:1px solid #0096d6;text-shadow:1px 1px 0px #4cc6f3;
 }
 .admin_panel {
 	margin-top: 60px;
@@ -1191,23 +1251,23 @@ div.va_footer_logo {
 	color: green;
 }
 .admin_panel a.update {
-	color: green;
+	color: #ffa400;
 	text-decoration: none;
 }
 .admin_panel a:hover.update {
-	color: #fff;
-	text-decoration: underline;
+	color: #ffffff;
+	text-decoration: none;
 }
 .admin_panel a.delete {
-	color: #A60000;
+	color: #ffa400;
 	text-decoration: none;
 }
 .admin_panel a:hover.delete {
 	color: #fff;
-	text-decoration: underline;
+	text-decoration: none;
 }
-/*************************************************************************************************************************************/
-/****************************************************************************************************** BUTTONS **********************/
+/*********************************************************************************************************************************/
+/****************************************************************************************************** BUTTONS ******************/
 .button_lg {
 	position:relative;
 	display:block;
@@ -1226,16 +1286,17 @@ div.va_footer_logo {
 
 .button_sm {
 	position:relative;
+	color: #fff ;
 	display:block;
 	outline:none;
 	cursor:pointer;
 	text-align:center;
 	text-decoration:none;
-	font:14px/100% Arial,Helvetica,sans-serif;
-	padding:5px 25px;
+	font:12px/100% Arial,Helvetica,sans-serif;
+	padding:2px 10px;
 	text-shadow:0 1px 1px rgba(0,0,0,.3);
-	-webkit-border-radius:5px;
-	-moz-border-radius:5px;border-radius:5px;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;border-radius:2px;
 	-webkit-box-shadow:0 0px 6px rgba(0,0,0,.8);
 	-moz-box-shadow:0 0px 6px rgba(0,0,0,.8);box-shadow:0 0px 4px rgba(0,0,0,.8);color:#fff;
 }
@@ -1256,7 +1317,8 @@ background: url(
 	gPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0i
 	dXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
 background: -moz-linear-gradient(top,  rgba(32,109,176,1) 0%, rgba(20,71,130,1) 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(32,109,176,1)), color-stop(100%,rgba(20,71,130,1))); /* Chrome,Safari4+ */
+/* Chrome,Safari4+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(32,109,176,1)), color-stop(100%,rgba(20,71,130,1))); 
 background: -webkit-linear-gradient(top,  rgba(32,109,176,1) 0%,rgba(20,71,130,1) 100%); /* Chrome10+,Safari5.1+ */
 background: -o-linear-gradient(top,  rgba(32,109,176,1) 0%,rgba(20,71,130,1) 100%); /* Opera 11.10+ */
 background: -ms-linear-gradient(top,  rgba(32,109,176,1) 0%,rgba(20,71,130,1) 100%); /* IE10+ */
@@ -1278,7 +1340,8 @@ background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0
 	lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZ
 	XJhdGVkKSIgLz4KPC9zdmc+);
 background: -moz-linear-gradient(top,  rgba(20,71,130,1) 0%, rgba(32,109,176,1) 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(20,71,130,1)), color-stop(100%,rgba(32,109,176,1))); /* Chrome,Safari4+ */
+ /* Chrome,Safari4+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(20,71,130,1)), color-stop(100%,rgba(32,109,176,1)));
 background: -webkit-linear-gradient(top,  rgba(20,71,130,1) 0%,rgba(32,109,176,1) 100%); /* Chrome10+,Safari5.1+ */
 background: -o-linear-gradient(top,  rgba(20,71,130,1) 0%,rgba(32,109,176,1) 100%); /* Opera 11.10+ */
 background: -ms-linear-gradient(top,  rgba(20,71,130,1) 0%,rgba(32,109,176,1) 100%); /* IE10+ */
@@ -1387,8 +1450,8 @@ input[type="submit"].btn, input[type="button"].btn {
 .banner_arrows.right_arrow:hover {
 	background: url(../images/buttons/banner_arrows.png) -56px -65px no-repeat;
 }
-/*************************************************************************************************************************************/
-/****************************************************************************************************** FORMS ************************/
+/*********************************************************************************************************************************/
+/****************************************************************************************************** FORMS ********************/
 #form_box, #setup_box {
 	position:relative;
 	float: left;
@@ -1498,8 +1561,8 @@ select {
   float: right;
 }
 .state_disclaimer {width: 400px;color: #777;font-size: 12px;position: relative;float: left;}
-/*************************************************************************************************************************************/
-/****************************************************************************************************** OVERLAY **********************/
+/*********************************************************************************************************************************/
+/****************************************************************************************************** OVERLAY *****************/
 /* the overlayed element */
 .simple_overlay {/* must be initially hidden */
 display:none;/* place overlay on top of other elements */
@@ -1568,8 +1631,8 @@ padding: 10px 20px;
 position: absolute;
 top: 40%;
 }
-/*************************************************************************************************************************************/
-/******************************************************************************************* TOOL TIPS (TipTip) **********************/
+/*********************************************************************************************************************************/
+/******************************************************************************************* TOOL TIPS (TipTip) ******************/
 #tiptip_holder {
 display: none;
 position: absolute;
@@ -1652,8 +1715,8 @@ margin-left: -7px;
 border-left-color: rgb(34,34,34);
 border-left-color: rgba(34,34,34,1);
 }
-/*************************************************************************************************************************************/
-/************************************************************************************************* WEBKIT HACKS **********************/
+/********************************************************************************************************************************/
+/************************************************************************************************* WEBKIT HACKS *****************/
 @media screen and (-webkit-min-device-pixel-ratio:0) {#tiptip_content {
 padding: 4px 8px 5px 8px;
 background-color: rgba(85,85,85,1);
@@ -2190,7 +2253,7 @@ table.display thead th {
 	font-weight: bold;
 	cursor: pointer;
 	* cursor: hand;
-	color: #0b236c;
+	color: #4cc6f3;
 	font-size: 11px;
 }
 
@@ -2247,11 +2310,13 @@ table.display td.center {
  * DataTables row classes
  */
 tr.odd {
-	background-color: #333;
+	background-color: #444444;
+	border-bottom: 1px solid #fff;
 }
 
 tr.even {
-	background-color: #999;
+	background-color: #555555;
+	border-bottom: 1px solid #fff;
 }
 
 

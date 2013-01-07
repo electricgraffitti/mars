@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Print category:</b>
+  <%= @print_collateral.print_category %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @print_collateral.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @print_collateral.description %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= @print_collateral.url %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= @print_collateral.image %>
+</p>
+
+
+<%= link_to 'Edit', edit_print_collateral_path(@print_collateral) %> |
+<%= link_to 'Back', print_collaterals_path %>

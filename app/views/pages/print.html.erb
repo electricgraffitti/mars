@@ -7,9 +7,22 @@
     <p class="banner">Print ads, postcards, mailers &#38; more.</p>
   </div>
 <% end %>
-<div class="body_header">
-  <p>Print Collateral</p>
+<!-- <div class="body_header">
+  <p>Magazine Ads</p>
   <div class="grey_block"></div>
+</div> -->
+<div class="main_content">
+  
+  <ul class="top_level">
+    <li>
+      <%= render :partial => 'print_collaterals/magazines' %>
+
+    </li>
+    <li>
+      <%= render :partial => 'print_collaterals/postcards' %>
+    </li>
+  </ul>
+  
 </div>
 
 

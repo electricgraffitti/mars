@@ -1,0 +1,35 @@
+<div class="admin_segment">
+  <h3>Main Categories</h3>
+  <div class="table_actions">
+    <%= link_to 'Add New Category', new_category_path, :class => "admin_btn  right" %>
+  </div>
+  <table id="dashboard_categories_table" class="display">
+    <thead>  
+      <tr>
+        <th>Image</th>
+        <th>Title</th>
+        <th>Description</th>
+				<th>URL</th>
+        <th>Edit Category</th>
+        <th>Delete Category</th>
+        <th>Created On</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% categories.each do |category| %>
+			<% unless category.blank? %>
+        <tr>
+          <td><p>Placeholder</p></td>
+          <td><%=h (category.title).titleize %></td>
+          <td><%=h truncate(category.description, :length => 200) %></td>
+          <td><%=h category.url_path %></td>
+					<td><%=h (category.created_at).to_s(:full) %></td>
+          <td><%= button_to 'Edit Category', edit_category_path(category), :class => "update" %></td>
+          <td><%= button_to 'Delete Category', category, :confirm => 'Are you sure?', :method => :delete, :class => "delete" %></td>
+        </tr>
+			<% end %>
+      <% end %>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,33 @@
+<div class="full row">
+	<div class="admin_panel">
+		<div class="full_row">
+		  <h1>Admin Dashboard</h1>
+		  <% unless @users.blank? %>
+		    <%= render :partial => 'admins/user_dashboard', :locals => {:users => @users} %>
+			<% end %>
+		</div>
+    <div class="full_row bottom_hr top_hr">
+      <% unless @categories.blank? %>
+        <%= render :partial => 'admins/category_dashboard', :locals => {:categories => @categories} %>
+      <% end %>
+    </div>
+    <div class="full_row bottom_hr top_hr">
+      <% unless @print_collaterals.blank? %>
+        <%= render :partial => 'admins/print_collateral_dashboard', :locals => {:print_collaterals => @print_collaterals} %>
+      <% end %>
+    </div>
+    <div class="full_row bottom_hr top_hr">
+      <%#= render :partial => 'admins/products_dashboard', :locals => {:products => @products} %>
+    </div>
+    <%= link_to "admin logout", admin_logout_path %>
+    <%= link_to "Admin Dashboard", admin_dashboard_path %>
+	</div>
+</div>
+
+<% content_for :javascripts do %>
+  <script type="text/javascript" charset="utf-8">
+    $(document).ready(function() {
+      Admin.adminScripts();
+    });
+  </script>
+<% end %>
