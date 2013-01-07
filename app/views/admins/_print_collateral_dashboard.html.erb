@@ -25,7 +25,7 @@
           <td><%=h (pc.title).titleize %></td>
           <td><%=h truncate(pc.description, :length => 200) %></td>
 					<td><%=h (pc.created_at).to_s(:full) %></td>
-          <td><%= button_to 'Edit Item', edit_print_collateral_path(pc), :class => "update" %></td>
+          <td><%= link_to 'Edit Item', edit_print_collateral_path(pc), :class => "update" %></td>
           <td><%= button_to 'Delete Item', pc, :confirm => 'Are you sure?', :method => :delete, :class => "delete" %></td>
         </tr>
 			<% end %>

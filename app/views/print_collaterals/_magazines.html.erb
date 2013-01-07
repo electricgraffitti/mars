@@ -5,7 +5,7 @@
 <% @magazines.each do |pc| %>
   <ul class="secondary_level_internal">
     <li>
-      <%= image_tag('../images/post_8x5landscape.png') %>
+      <%= image_tag pc.image.url.to_s %>
       <h3><%= pc.title %></h3>
       <p>
         <%= pc.description %>

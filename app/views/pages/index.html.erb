@@ -18,7 +18,7 @@
       <% @categories.each do |c| %>
       <ul class="secondary_level">
         <li>
-          <%= image_tag('../images/print_icon.png') %>
+          <%= image_tag c.image.url.to_s %>
           <h3><%= c.title %></h3>
           <p>
             <%= c.description %>

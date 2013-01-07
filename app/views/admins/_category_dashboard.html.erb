@@ -25,7 +25,7 @@
           <td><%=h truncate(category.description, :length => 200) %></td>
           <td><%=h category.url_path %></td>
 					<td><%=h (category.created_at).to_s(:full) %></td>
-          <td><%= button_to 'Edit Category', edit_category_path(category), :class => "update" %></td>
+          <td><%= link_to 'Edit Category', edit_category_path(category), :class => "update" %></td>
           <td><%= button_to 'Delete Category', category, :confirm => 'Are you sure?', :method => :delete, :class => "delete" %></td>
         </tr>
 			<% end %>

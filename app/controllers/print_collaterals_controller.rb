@@ -63,7 +63,7 @@ class PrintCollateralsController < ApplicationController
 
     respond_to do |format|
       if @print_collateral.update_attributes(params[:print_collateral])
-        format.html { redirect_to @print_collateral, notice: 'Print collateral was successfully updated.' }
+        format.html { redirect_to admin_dashboard_path, notice: 'Print collateral was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

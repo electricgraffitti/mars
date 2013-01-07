@@ -12,5 +12,8 @@
 #
 
 class Category < ActiveRecord::Base
-  attr_accessible :description, :image, :rul_path, :title
+  attr_accessible :description, :image, :url_path, :title
+  
+  #Carrierwave
+  mount_uploader :image, ImageUploader
 end

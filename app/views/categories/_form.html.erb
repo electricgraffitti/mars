@@ -1,15 +1,5 @@
-<%= form_for(@category) do |f| %>
-  <% if @category.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@category.errors.count, "error") %> prohibited this category from being saved:</h2>
-
-      <ul>
-      <% @category.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+<%= form_for @category, :html => {:multipart => true} do |f| %>
+  <%= render :partial => "layouts/error_block", :locals => {:object => @category} %>
 
   <div class="field">
     <%= f.label :title %><br />
@@ -20,12 +10,11 @@
     <%= f.text_area :description %>
   </div>
   <div class="field">
-    <%= f.label :rul_path %><br />
-    <%= f.text_field :rul_path %>
+    <%= f.label :url_path %><br />
+    <%= f.text_field :url_path %>
   </div>
   <div class="field">
-    <%= f.label :image %><br />
-    <%= f.text_field :image %>
+    <%= f.file_field :image %>
   </div>
   <div class="actions">
     <%= f.submit %>

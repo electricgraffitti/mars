@@ -19,14 +19,7 @@ class PrintCollateral < ActiveRecord::Base
   scope :postcard, where(:print_category => 'postcard')
   scope :advertisement, where(:print_category => 'advertisement')
   scope :other, where(:print_category => 'other')
-  
-  
-  #Associations
-  # 
-  # scope :magazine, :conditions => {:print_category => "magazine"}
-  # scope :postcard, :conditions => {:print_category => "postcard"}
-  # scope :advertisement, :conditions => {:print_category => "advertisement"}
-  # scope :other, :conditions => {:print_category => "other"}
 
+  mount_uploader :image, ImageUploader
   
 end
