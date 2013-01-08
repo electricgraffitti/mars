@@ -1,6 +1,7 @@
 class CategoriesController < ApplicationController
   
   before_filter :require_admin, :except => [:index]
+  layout 'admin'
   
   
   # GET /categories

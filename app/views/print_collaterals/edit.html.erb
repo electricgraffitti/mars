@@ -1,6 +1,9 @@
-<h1>Editing print_collateral</h1>
+<div class="full_row">
+  <div class="setup_wrap">
+    <h2 class="setup">Edit: <%= @print_collateral.title %></h2>
+  </div>
+</div>
+<div class="full_row no_top">
+	<%= render 'print_collaterals/form' %>
+</div>
 
-<%= render 'form' %>
-
-<%= link_to 'Show', @print_collateral %> |
-<%= link_to 'Back', print_collaterals_path %>

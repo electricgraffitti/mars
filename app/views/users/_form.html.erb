@@ -24,6 +24,9 @@
   <div class="clear"></div>
   <div class="field">
     <%= f.submit "Login", :class => "button_lg orange_button" %><br/>
-    <%= link_to 'Back', admins_path %>
   </div>
-<% end %></div>
+  <div class="field">
+    <%= link_to 'Cancel', admin_dashboard_path, :class => "button_lg orange_button"%>
+  </div>
+<% end %>
+</div>

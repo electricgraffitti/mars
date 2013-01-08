@@ -12,8 +12,11 @@
 #
 
 class Category < ActiveRecord::Base
-  attr_accessible :description, :image, :url_path, :title
+  attr_accessible :description, :image, :url_path, :title, :list_order
   
   #Carrierwave
   mount_uploader :image, ImageUploader
+  
+  #Scopes
+  scope :item_order, :order => "list_order"
 end

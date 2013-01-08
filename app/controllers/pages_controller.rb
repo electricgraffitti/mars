@@ -3,16 +3,15 @@ class PagesController < ApplicationController
   before_filter :require_auth
   
   def index
-    @categories = Category.order('id DESC')
+    @categories = Category.all(:order => 'list_order')
   end
   
   def print
-    @magazines = PrintCollateral.magazine.order('id ASC')
-    @postcards = PrintCollateral.postcard.order('id DESC')
-    @advertisements = PrintCollateral.advertisement.order('id DESC')
-    @others = PrintCollateral.other.order('id DESC')
+    @magazines = PrintCollateral.magazine(:order => 'list_order')
+    @postcards = PrintCollateral.postcard(:order => 'list_order')
+    @advertisements = PrintCollateral.advertisement(:order => 'list_order')
+    @others = PrintCollateral.other(:order => 'list_order')
 
-    
   end
   
   def landing_pages

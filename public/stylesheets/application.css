@@ -863,7 +863,7 @@ a.contact_link:hover {
 	position: relative;
 	width: 100%;
 	float: left;
-	padding: 20px 0px 20px 20px;
+	padding: 20px 0px 20px 10px;
 	text-align:left;
 	/*min-height: 300px;*/
 }
@@ -1171,6 +1171,10 @@ div.va_footer_logo {
 	padding: 10px 0px 40px 0px;
 	border-bottom:1px solid #000;
 }
+.admin_segment h3 {
+	color: #0096d6;
+	font-size:24px;
+}
 .admin_btn {
 	position:relative;
 	display:block;
@@ -1208,19 +1212,25 @@ div.va_footer_logo {
 	border:1px solid #0096d6;text-shadow:1px 1px 0px #4cc6f3;
 }
 .admin_panel {
-	margin-top: 60px;
+/*	margin-top: 60px;*/
 }
 .admin_panel ul {
 	width: 100%;
-	margin-top: 80px;
+/*	margin-top: 80px;*/
 	float: left;
 	text-align: center;
+	margin-bottom:30px;
+}
+h1.admin {
+	color: #0096d6;
+	font-size:40px;
+	font-weight:100;
 }
 .admin_panel li {
-	width: 130px;
+/*	width: 130px;*/
 	height: 30px;
-	background: blue;
-	float: left;
+/*	background: blue;*/
+	float: right;
 	margin-right: 5px;
 }
 .admin_panel a {
@@ -1230,7 +1240,7 @@ div.va_footer_logo {
 }
 .admin_panel a:hover {
 	color: #fff;
-	text-decoration: underline;
+	text-decoration: none;
 }
 .admin_panel a.admin_new_link {
   background: none repeat scroll 0 0 #2948ab;
@@ -1464,6 +1474,9 @@ input[type="submit"].btn, input[type="button"].btn {
 }
 #setup_box {
 	width: 600px;
+	float: none;
+	margin:0px auto;
+	min-height:405px;
 }
 #form_box h3 {
 	margin-left:5px;
@@ -1497,6 +1510,7 @@ h2.setup {
 	font-size: 30px;
 	font-weight:100;
 	text-align:left;
+	margin-left:130px;
 }
 .admin_form_wrap {
 	margin-top: 60px;
@@ -1509,8 +1523,9 @@ h2.setup {
 .form_field, .field {
 	float: left;
 	padding: 8px;
-	width: 240px;
+/*	width: 240px;*/
 }
+
 .checkbox input[type="checkbox"] {
 	position: relative;
 	margin-right: 5px;

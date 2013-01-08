@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   
   before_filter :require_admin
-  layout 'internal'
+  layout 'admin'
   
   # GET /users
   # GET /users.json

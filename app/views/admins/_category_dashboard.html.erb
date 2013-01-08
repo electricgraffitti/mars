@@ -10,6 +10,7 @@
         <th>Title</th>
         <th>Description</th>
 				<th>URL</th>
+				<th>Order</th>
         <th>Edit Category</th>
         <th>Delete Category</th>
         <th>Created On</th>
@@ -24,6 +25,7 @@
           <td><%=h (category.title).titleize %></td>
           <td><%=h truncate(category.description, :length => 200) %></td>
           <td><%=h category.url_path %></td>
+          <td><%=h category.list_order %></td>
 					<td><%=h (category.created_at).to_s(:full) %></td>
           <td><%= link_to 'Edit Category', edit_category_path(category), :class => "update" %></td>
           <td><%= button_to 'Delete Category', category, :confirm => 'Are you sure?', :method => :delete, :class => "delete" %></td>

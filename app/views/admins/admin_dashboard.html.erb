@@ -1,7 +1,14 @@
 <div class="full row">
 	<div class="admin_panel">
 		<div class="full_row">
-		  <h1>Admin Dashboard</h1>
+		  <div class="admin_nav">
+		    <ul>
+		      <li>
+		        <%= link_to "admin logout", admin_logout_path, :class => "button_lg orange_button"%>
+		      </li>
+		    </ul>
+		  </div>
+		  <h1 class="admin">Admin Dashboard</h1>
 		  <% unless @users.blank? %>
 		    <%= render :partial => 'admins/user_dashboard', :locals => {:users => @users} %>
 			<% end %>
@@ -19,8 +26,6 @@
     <div class="full_row bottom_hr top_hr">
       <%#= render :partial => 'admins/products_dashboard', :locals => {:products => @products} %>
     </div>
-    <%= link_to "admin logout", admin_logout_path %>
-    <%= link_to "Admin Dashboard", admin_dashboard_path %>
 	</div>
 </div>
 

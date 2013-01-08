@@ -13,12 +13,13 @@
 #
 
 class PrintCollateral < ActiveRecord::Base
-  attr_accessible :description, :image, :print_category, :title, :url
+  attr_accessible :description, :image, :print_category, :title, :url, :list_order
   
   scope :magazine, where(:print_category => 'magazine')
   scope :postcard, where(:print_category => 'postcard')
   scope :advertisement, where(:print_category => 'advertisement')
   scope :other, where(:print_category => 'other')
+  scope :item_order, :order => "list_order"
 
   mount_uploader :image, ImageUploader
   

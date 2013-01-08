@@ -1,5 +1,23 @@
-<h1>New category</h1>
+<div class="full_row">
+  <div class="setup_wrap">
+    <h2 class="setup">New Category</h2>
+  </div>
+</div>
+<div class="full_row no_top">
+  <%= render :partial => 'categories/form' %>
+</div>
 
-<%= render 'form' %>
 
-<%= link_to 'Back', categories_path %>
+<% content_for :javascripts do %> 
+	<script>
+    $(function() {
+      Base.pageResize();
+    });
+	</script>
+<% end %>
+
+<!-- <h1>New category</h1> -->
+
+<%#= render 'form' %>
+
+<%#= link_to 'Back', categories_path %>

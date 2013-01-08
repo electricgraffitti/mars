@@ -1,6 +1,7 @@
 class PrintCollateralsController < ApplicationController
   
   before_filter :require_admin
+  layout "admin"
   
   # GET /print_collaterals
   # GET /print_collaterals.json
